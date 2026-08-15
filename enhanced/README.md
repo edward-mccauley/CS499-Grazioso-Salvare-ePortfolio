@@ -1,5 +1,3 @@
-cd ~/Documents/CS499/CS499_Milestone_Two_Software_Design
-cat > enhanced/README.md <<'EOF'
 # Enhanced CS-340 Grazioso Salvare Dashboard
 
 ## Artifact Description
