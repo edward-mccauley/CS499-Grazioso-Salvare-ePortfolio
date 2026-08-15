@@ -31,16 +31,17 @@ enhanced/
 .env.example
 .gitignore
 README.md
+```
 
 ## Enhancement One: Software Design and Engineering
 
 Enhancement One refactored the original dashboard into a more maintainable layered structure. The enhanced version separates responsibilities into clearer components:
 
-- app.py: application entry point
-- animal_shelter.py: MongoDB database access layer
-- config.py: environment-based configuration
-- rescue_filter_service.py: rescue criteria and filtering logic
-- dashboard_controller.py: coordination layer
+* `app.py`: application entry point
+* `animal_shelter.py`: MongoDB database access layer
+* `config.py`: environment-based configuration
+* `rescue_filter_service.py`: rescue criteria and filtering logic
+* `dashboard_controller.py`: coordination layer
 
 This enhancement demonstrates modular design, separation of concerns, class-based organization, configuration management, documentation, and maintainability.
 
@@ -50,11 +51,11 @@ Enhancement Two improves the rescue-animal selection process by adding matching,
 
 The enhanced version uses:
 
-- Dictionaries to organize rescue criteria
-- Lists to process animal records
-- Conditional logic to evaluate matches
-- Scoring rules to assign candidate scores
-- Sorting to rank stronger rescue candidates first
+* Dictionaries to organize rescue criteria
+* Lists to process animal records
+* Conditional logic to evaluate matches
+* Scoring rules to assign candidate scores
+* Sorting to rank stronger rescue candidates first
 
 This enhancement changes the selection process from basic filtering into a more useful decision-support feature.
 
@@ -64,56 +65,65 @@ Enhancement Three improves the MongoDB database access layer by adding safer que
 
 The enhanced version includes:
 
-- A dedicated database_query_service.py module
-- Allowed filter fields
-- Allowed update fields
-- Allowed MongoDB operators
-- Projection support
-- Result limit validation
-- Safer update handling
-- Controlled database error handling
-- Environment-based configuration
+* A dedicated `database_query_service.py` module
+* Allowed filter fields
+* Allowed update fields
+* Allowed MongoDB operators
+* Projection support
+* Result limit validation
+* Safer update handling
+* Controlled database error handling
+* Environment-based configuration
 
-This enhancement supports safer and more maintainable database interaction. 
+This enhancement supports safer and more maintainable database interaction.
 
 ## Security and Configuration
 
 This public repository does not include real database credentials.
 
-Database configuration values should be supplied through environment variables. The .env.example file documents the expected configuration format:
+Database configuration values should be supplied through environment variables. The `.env.example` file documents the expected configuration format:
 
-  AAC_DB_HOST=localhost
-  AAC_DB_PORT=27017
-  AAC_DB_NAME=aac
-  AAC_DB_COLLECTION=animals
-  AAC_DB_USERNAME=your_username_here
-  AAC_DB_PASSWORD=your_password_here
+```text
+AAC_DB_HOST=localhost
+AAC_DB_PORT=27017
+AAC_DB_NAME=aac
+AAC_DB_COLLECTION=animals
+AAC_DB_USERNAME=your_username_here
+AAC_DB_PASSWORD=your_password_here
+```
 
 The enhanced source code uses environment-based configuration instead of hard-coded credentials.
+
+## Requirements
+
+The enhanced artifact uses Python and the dependencies listed in `enhanced/requirements.txt`.
+
+A live MongoDB database is not required to run the included review-mode demonstration.
 
 ## Running the Enhanced Artifact
 
 The enhanced project includes review-mode output that can be run without a live MongoDB database.
 
 From the repository root:
-  python -m venv .venv
-  source .venv/bin/activate
-  pip install -r enhanced/requirements.txt
-  cd enhanced
-  python app.py
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r enhanced/requirements.txt
+cd enhanced
+python app.py
+```
 
 Expected review-mode output includes:
-- Available rescue options
-- Ranked sample results for Water Rescue
-- Safe database query example
-- Safe projection example
-- Safe result limit example
+
+* Available rescue options
+* Ranked sample results for Water Rescue
+* Safe database query example
+* Safe projection example
+* Safe result limit example
 
 ## Notes for Reviewers
 
-The original/ folder contains the original dashboard notebook and a redacted version of the original CRUD module for comparison. The enhanced/ folder contains the refactored and improved version of the artifact.
+The `original/` folder contains the original dashboard notebook and a redacted version of the original CRUD module for comparison. The `enhanced/` folder contains the refactored and improved version of the artifact.
 
 This repository is intended to support the CS 499 ePortfolio and demonstrate growth in software design, algorithms and data structures, and database development.
-
-
-
