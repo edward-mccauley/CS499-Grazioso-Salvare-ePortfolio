@@ -1,8 +1,12 @@
 ####################################################################
-# CRUD_Python_Moudule.py
+# CRUD_Python_Module.py
 # Edward McCauley
 # CS-340 Client Server Development
 # Project 2
+####################################################################
+# NOTE:
+# This is a redacted copy of the original course artifact.
+# Original course credentials were removed before publishing this repository.
 ####################################################################
 
 from pymongo import MongoClient 
